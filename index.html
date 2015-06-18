@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Quick Toggle</title>
+	<meta name="description" content="Quick Toggle - Originally Created for Flickerbox, Inc by Eric Constantinides">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="quick-toggle.css" media="screen">
+	<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js') // remove no-js</script>
+	<script src="header.js"></script>
+</head>
+<body>
+
+<button class="js-quick-toggle" data-js-quick-toggle="the-clickers">1. <strong>Parent</strong> Child Click</button>
+<button class="js-quick-toggle">2. Single Click</button>
+<button class="js-quick-toggle" data-js-quick-toggle="gonna-always-toggle" data-js-quick-toggle-type="click-all">Always Toggle</button>
+
+<div class="js-quick-toggle" data-js-quick-toggle-type="hover" data-js-quick-toggle="the-hoverers">
+	3. <strong>Parent</strong> Child Hover
+	<div class="children" data-js-quick-toggle="the-hoverers">
+		<p>Stuff inside the hover</p>
+		<h2>more stuff inside the hover</h2>
+		<button class="js-quick-toggle" data-js-quick-toggle="fun">6. Click Inside Child Hover</button>
+		<div class="children" data-js-quick-toggle="fun">
+			HELLO
+			<div class="js-quick-toggle" data-js-quick-toggle="move-fun" data-js-quick-toggle-type="click">More Fun</div>
+			<div data-js-quick-toggle="move-fun">More Fun's answer</div>
+		</div>
+	</div>
+</div>
+
+
+<p class="js-quick-toggle" data-js-quick-toggle-type="hover">
+	7. Single Hover
+</p>
+<p class="children" data-js-quick-toggle="the-clickers">
+	8. Parent <strong>Child</strong> Click
+</p>
+<p class="children" data-js-quick-toggle="the-clickers">
+	8. Parent <strong>Child</strong> Click
+</p>
+<p class="children" data-js-quick-toggle="gonna-always-toggle">
+	Always Toggle
+</p>
+
+
+<div class="box-toggle js-quick-toggle" data-js-quick-toggle-type="hover">
+	<div class="box-toggle__first">BEFORE</div>
+	<div class="box-toggle__second">AFTER</div>
+</div>
+<div class="box-toggle js-quick-toggle" data-js-quick-toggle-type="hover">
+	<div class="box-toggle__first box-toggle__first--2">BEFORE</div>
+	<div class="box-toggle__second box-toggle__second--2">AFTER</div>
+</div>
+
+<script src="jquery-min.js"></script>
+<script src="quick-toggle.js"></script>
+</body>
+</html>
