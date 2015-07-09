@@ -21,7 +21,7 @@
 //
 //------------------------------------------------------------------------------
 
-function quickToggle() {
+var quickToggle = function() {
 	var isTouch = ( ('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0) ) ? true : false;
 	var $target;
 	var toggleType;
@@ -194,7 +194,4 @@ function quickToggle() {
 	}
 
 	bind();
-
-}
-quickToggle();
-
+}();
